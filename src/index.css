@@ -33,6 +33,11 @@ h1 strong {
   font-weight: 900;
 }
 
+h2 {
+  text-align: center;
+  margin: 0 0 40px;
+}
+
 .container {
   max-width: 1000px;
   width: 100%;
@@ -122,10 +127,8 @@ h1 strong {
 .feature {
   background: #fafafa;
   padding: 80px;
-}
-.feature h2 {
-  text-align: center;
-  margin: 0 0 40px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 .feature--item {
   width: 250px;
@@ -164,4 +167,8 @@ h1 strong {
 .feature--item p {
   margin: 0;
   line-height: 1.5;
+}
+
+.get-started {
+  padding: 80px 0;
 }
