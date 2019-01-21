@@ -56,6 +56,11 @@ svg
   justify-content flex-start
   align-items center
 
+.center
+  display flex
+  justify-content center
+  align-items center
+
 .nav
   &--logo
     display flex
@@ -159,6 +164,8 @@ svg
   &--heading
     border-bottom 1px solid #ddd
     h4
+      font-size 16px
+      line-height 1
       margin 0
       padding 16px 12px
       color #999
@@ -175,3 +182,26 @@ svg
     &.Linux .is-Linux,
     &.Windows .is-Windows
       display block
+.card
+  width 600px
+  border 1px solid #ddd
+  border-radius 8px
+  margin-bottom 24px
+  &--title
+    font-size 16px
+    line-height 1
+    font-weight 300
+    margin 0
+    padding 16px 24px
+    border-bottom 1px solid #ddd
+    background #fafafa
+    border-top-left-radius 7px
+    border-top-right-radius 7px
+  &--text
+    padding 16px 24px
+  &--note
+    margin 0
+    padding 8px 24px
+    background #f4f4f4
+    border-bottom-left-radius 7px
+    border-bottom-right-radius 7px

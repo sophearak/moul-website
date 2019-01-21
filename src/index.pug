@@ -73,9 +73,23 @@ html(lang='en')
             h4.platform(data-platform='Linux') Linux
             h4.platform(data-platform='Windows') Windows
         .tab--content.macOS
-          .container
+          .container.center
             .is-macOS
-              | TBA
+              .card
+                h5.card--title Download binary
+                .card--text
+                  pre
+                    | wget https://github.com/sophearak/moul/releases/download/v1.0.0-beta.0/moul-darwin
+              .card
+                h5.card--title Move binary into local bin
+                .card--text
+                  pre
+                    | mv moul-darwin ~/.local/bin/moul
+                p.card--note
+                  | if &nbsp;
+                  code ~/.local/bin
+                  | &nbsp;doesn't exist.&nbsp;
+                  code mkdir -p ~/.local/bin
             .is-Linux
               | Coming soon
             .is-Windows
