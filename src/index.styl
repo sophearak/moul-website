@@ -190,7 +190,7 @@ svg
     &.Windows .is-Windows
       display block
 .card
-  width 600px
+  width 700px
   border 1px solid #ddd
   border-radius 8px
   margin-bottom 24px
@@ -200,10 +200,14 @@ svg
     font-weight 300
     margin 0
     padding 16px 24px
-    border-bottom 1px solid #ddd
     background #fafafa
     border-top-left-radius 7px
     border-top-right-radius 7px
+    &:last-child
+      border-bottom-left-radius 7px
+      border-bottom-right-radius 7px
+    &:not(:last-child)
+      border-bottom 1px solid #ddd
   &--text
     padding 16px 24px
   &--note
@@ -212,3 +216,4 @@ svg
     background #f4f4f4
     border-bottom-left-radius 7px
     border-bottom-right-radius 7px
+
