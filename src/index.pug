@@ -97,6 +97,18 @@ html(lang='en')
                   code ~/.local/bin
                   | &nbsp;doesn't exist.&nbsp;
                   code mkdir -p ~/.local/bin
+              .card
+                h5.card--title Add <code>~/.local/bin</code> to $PATH
+                .card--text
+                  pre
+                    | echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
+                p.card--note
+                  | if you're using zsh replace <code>~/.bashrc</code> with <code>~/.zshrc</code>
+              .card
+                h5.card--title Reload
+                .card--text
+                  pre
+                    | source ~/.bashrc
             .is-Linux
               | Coming soon
             .is-Windows
