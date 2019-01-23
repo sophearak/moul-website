@@ -1,6 +1,8 @@
 primary-color = #0082ff
 timing-function = cubic-bezier(0.4, 0, 0.2, 1)
 
+@import './prism/index.styl'
+
 *,
 :after,
 :before
@@ -63,6 +65,7 @@ svg
   display flex
   justify-content center
   align-items center
+  flex-flow column
 
 .nav
   &--logo
@@ -216,4 +219,3 @@ svg
     background #f4f4f4
     border-bottom-left-radius 7px
     border-bottom-right-radius 7px
-

@@ -11,6 +11,8 @@ html(lang='en')
     meta(name='description' content= siteDescription)
     include partials/meta/twitter.pug
     include partials/meta/facebook.pug
+    script(src='./prism/index.js' defer)
+    script(src='./index.js' defer)
     link(rel='stylesheet' href='./index.styl')
   body
     header
@@ -80,39 +82,52 @@ html(lang='en')
             h4.platform(data-platform='Linux') Linux
             h4.platform(data-platform='Windows') Windows
         .tab--content.macOS
-          .container.center
+          .container
             .is-macOS
-              .card
-                h5.card--title Download binary
-                .card--text
-                  pre
-                    | wget https://github.com/sophearak/moul/releases/download/v1.0.0-beta.0/moul-darwin
-              .card
-                h5.card--title Move binary into local bin
-                .card--text
-                  pre
-                    | mv moul-darwin ~/.local/bin/moul
-                p.card--note
-                  | if &nbsp;
-                  code ~/.local/bin
-                  | &nbsp;doesn't exist.&nbsp;
-                  code mkdir -p ~/.local/bin
-              .card
-                h5.card--title Add <code>~/.local/bin</code> to $PATH
-                .card--text
-                  pre
-                    | echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
-                p.card--note
-                  | if you're using zsh replace <code>~/.bashrc</code> with <code>~/.zshrc</code>
-              .card
-                h5.card--title Reload
-                .card--text
-                  pre
-                    | source ~/.bashrc
+              h5 Download binary
+              pre
+                code.language-bash
+                  | wget https://github.com/sophearak/moul/releases/download/v1.0.0-beta.0/moul-darwin
+              h5 Move binary into local bin
+              pre
+                code.language-bash
+                  | mv moul-darwin ~/.local/bin/moul
+              p
+                | if <code>~/.local/bin</code> doesn't exist. <code> mkdir -p ~/.local/bin</code>
+              h5 Add <code>~/.local/bin</code> to <code>$PATH</code>
+              pre
+                code.language-bash
+                  | echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
+              p
+                | if you're using zsh replace <code>~/.bashrc</code> with <code>~/.zshrc</code>
+              h5 Reload
+              pre
+                code.language-bash
+                  | source ~/.bashrc
             .is-Linux
               | Coming soon
             .is-Windows
               | Coming soon
     #usage.usage
       h2 Usage
-    script(src='./index.js')
+      .container
+        h5 Step 1
+          pre
+            code.language-bash
+              | moul new my-collection
+        h5 Step 2
+          p
+            | Place photos into its folder
+        h5 Step 3
+          p
+            | Add your information in <code class="language-bash">config.json<code>
+        h5 Step 4
+          pre
+            code.language-bash
+              | moul dev
+          p
+            | It depends on how many photos you added to <code class="language-bash">photos/collection</code>, the command <code class="language-bash">moul dev</code> might take a while. It's a good time to grab coffee.
+        h5 Step 5
+          pre
+            code.language-bash
+              | moul build
