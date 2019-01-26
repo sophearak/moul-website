@@ -1,6 +1,6 @@
 - const siteName = 'moul •'
 - const siteDescription = 'The minimalist photo collection builder'
-- const version = 'v1.0.0-beta.0'
+- const version = 'v1.0.0-beta.1'
 doctype html
 html(lang='en')
   head
@@ -19,7 +19,7 @@ html(lang='en')
         .container.between-center
           .nav--logo
             a(href='/')= siteName
-            a.version(href='https://github.com/sophearak/moul/releases')= version
+            a.badge(href='https://github.com/sophearak/moul/releases')= version
           .nav--link
             a(href='#features') Features
             a(href='#usage') Usage
@@ -89,11 +89,12 @@ html(lang='en')
                   pre
                     | curl -s https://moul.app/install.sh --darwin | sh
             .is-Linux
-              h5 Open Terminal
-              .card
-                h5.card--title
-                  pre
-                    | curl -s https://moul.app/install.sh --linux | sh
+              | Coming soon
+              //- h5 Open Terminal
+              //- .card
+              //-   h5.card--title
+              //-     pre
+              //-       | curl -s https://moul.app/install.sh --linux | sh
             .is-Windows
               | Coming soon
     #usage.usage
@@ -110,15 +111,15 @@ html(lang='en')
             | Step 2 - Place photos into its folder
           .card--text
             ul
-              li <code>photos/cover</code>
-              li <code>photos/profile</code>
-              li <code>photos/collection</code>
+              li <code>photos/cover</code> any landscape aspect ratio will work fine
+              li <code>photos/profile</code> square (1:1 aspect ratio)
+              li <code>photos/collection</code> any aspect ratio
         .card
           h5.card--title
             | Step 3 - Add your information
           .card--text
-            p
-              | Add your information in <code>config.json<code>
+            ul
+              li Add your information in <code>config.json</code>
         .card
           h5.card--title
             | Step 4 - Generate your collection
@@ -137,6 +138,6 @@ html(lang='en')
     footer
       .container.center
         p
-          | Made with <del>love</del> <del>keyboard</del> coffee
+          | Made with <del>love</del> <del>keyboard</del> coffee!
         p.copyright
           | MIT License © 2019 <a href="https://sophearak.me/">Sophearak</a>

@@ -43,10 +43,42 @@ svg
   fill none
 
 pre
+  font-family monospace, monospace
+  font-size 14px
+  line-height 1
+  color #333
   margin 0
+
+code, .badge
+  font-size 12px
+  font-weight 500
+  color #999
+  background #fafafa
+  padding 6px
+  border-radius 3px
+  border 1px solid #ddd
+  transition all 150ms timing-function
+  &:focus, &:hover
+    color #666
+    background #eee
+    border-color transparent
 
 del
   font-style italic
+
+ul
+  list-style none
+  margin 0
+  padding 0
+  display flex
+  flex-flow column
+  li
+    display flex
+    align-items center
+    code
+      margin-right 8px
+    &:not(:last-child)
+      margin 0 0 12px
 
 .container
   max-width 1000px
@@ -81,16 +113,11 @@ del
       font-size 20px
       line-height 1
       font-weight 900
-      &.version
+      &.badge
         font-size 12px
         font-weight 500
         color #999
-        background #fafafa
-        padding 6px
-        border-radius 3px
-        border 1px solid #ddd
         margin 0 0 0 8px
-        transition all 150ms timing-function
         &:focus, &:hover
           color #666
           background #eee
@@ -222,6 +249,11 @@ del
     background #f4f4f4
     border-bottom-left-radius 7px
     border-bottom-right-radius 7px
+    p
+      margin 0
+      font-size 14px
+      line-height 1
+      color #888
 
 footer
   background #f5f5f5
