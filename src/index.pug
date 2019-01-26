@@ -11,7 +11,6 @@ html(lang='en')
     meta(name='description' content= siteDescription)
     include partials/meta/twitter.pug
     include partials/meta/facebook.pug
-    script(src='./prism/index.js' defer)
     script(src='./index.js' defer)
     link(rel='stylesheet' href='./index.styl')
   body
@@ -74,7 +73,7 @@ html(lang='en')
             | Download a&nbsp;
             a(href='https://github.com/sophearak/moul/releases', target='blank') single binary
             | , add to <code>$PATH</code> and you’re done
-
+        h3 Don't know what todo?
       .tab
         .tab--heading
           .container.start-center
@@ -82,52 +81,62 @@ html(lang='en')
             h4.platform(data-platform='Linux') Linux
             h4.platform(data-platform='Windows') Windows
         .tab--content.macOS
-          .container
+          .container.center
             .is-macOS
-              h5 Download binary
-              pre
-                code.language-bash
-                  | wget https://github.com/sophearak/moul/releases/download/v1.0.0-beta.0/moul-darwin
-              h5 Move binary into local bin
-              pre
-                code.language-bash
-                  | mv moul-darwin ~/.local/bin/moul
-              p
-                | if <code>~/.local/bin</code> doesn't exist. <code> mkdir -p ~/.local/bin</code>
-              h5 Add <code>~/.local/bin</code> to <code>$PATH</code>
-              pre
-                code.language-bash
-                  | echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
-              p
-                | if you're using zsh replace <code>~/.bashrc</code> with <code>~/.zshrc</code>
-              h5 Reload
-              pre
-                code.language-bash
-                  | source ~/.bashrc
+              h5 Open Terminal
+              .card
+                h5.card--title
+                  pre
+                    | curl -s https://moul.app/install.sh --darwin | sh
             .is-Linux
-              | Coming soon
+              h5 Open Terminal
+              .card
+                h5.card--title
+                  pre
+                    | curl -s https://moul.app/install.sh --linux | sh
             .is-Windows
               | Coming soon
     #usage.usage
       h2 Usage
-      .container
-        h5 Step 1
-          pre
-            code.language-bash
+      .container.center
+        .card
+          h5.card--title
+            | Step 1 - Create new photo collection
+          .card--text
+            pre
               | moul new my-collection
-        h5 Step 2
-          p
-            | Place photos into its folder
-        h5 Step 3
-          p
-            | Add your information in <code class="language-bash">config.json<code>
-        h5 Step 4
-          pre
-            code.language-bash
+        .card
+          h5.card--title
+            | Step 2 - Place photos into its folder
+          .card--text
+            ul
+              li <code>photos/cover</code>
+              li <code>photos/profile</code>
+              li <code>photos/collection</code>
+        .card
+          h5.card--title
+            | Step 3 - Add your information
+          .card--text
+            p
+              | Add your information in <code>config.json<code>
+        .card
+          h5.card--title
+            | Step 4 - Generate your collection
+          .card--text
+            pre
               | moul dev
-          p
-            | It depends on how many photos you added to <code class="language-bash">photos/collection</code>, the command <code class="language-bash">moul dev</code> might take a while. It's a good time to grab coffee.
-        h5 Step 5
-          pre
-            code.language-bash
+          .card--note
+            p
+              | This might take a while. It's a good time to grab coffee.
+        .card
+          h5.card--title
+            | Step 5 - Build
+          .card--text
+            pre
               | moul build
+    footer
+      .container.center
+        p
+          | Made with <del>love</del> <del>keyboard</del> coffee
+        p.copyright
+          | MIT License © 2019 <a href="https://sophearak.me/">Sophearak</a>
