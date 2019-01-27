@@ -84,8 +84,7 @@ html(lang='en')
       .tab
         .tab--heading
           .container.start-center
-            h4.platform.active(data-platform='macOS') macOS
-            h4.platform(data-platform='Linux') Linux
+            h4.platform.active(data-platform='macOS') macOS & Linux
             h4.platform(data-platform='Windows') Windows
         .tab--content.macOS
           .container.center
@@ -94,14 +93,7 @@ html(lang='en')
               .card
                 h5.card--title
                   pre
-                    | curl -s https://moul.app/install.sh --darwin | sh
-            .is-Linux
-              | Coming soon
-              //- h5 Open Terminal
-              //- .card
-              //-   h5.card--title
-              //-     pre
-              //-       | curl -s https://moul.app/install.sh --linux | sh
+                    | curl -s https://moul.app/install.sh | sh
             .is-Windows
               | Coming soon
     footer
