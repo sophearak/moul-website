@@ -10,6 +10,7 @@ body
   font-family -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, 'Google Sans', Roboto, Noto, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif
   margin 0
   color #111
+  overflow-x hidden
 
 a
   color #999
@@ -48,6 +49,7 @@ pre
   line-height 1
   color #333
   margin 0
+  white-space pre-wrap
 
 code, .badge
   font-size 12px
@@ -223,7 +225,8 @@ ul
     &.Windows .is-Windows
       display block
 .card
-  width 700px
+  max-width 700px
+  width 100%
   border 1px solid #ddd
   border-radius 8px
   margin-bottom 24px
@@ -265,7 +268,30 @@ ul
 footer
   background #f5f5f5
   border-top 1px solid #ddd
-  padding: 40px 60px
+  padding 40px 60px
+  text-align center
   .copyright
     color #999
     font-family monospace, monospace
+
+@media screen and (max-width 768px)
+  .nav--link
+    a:not(.button)
+      display none
+  .hero
+    .hero--content
+      width 100%
+      text-align center
+    .start-center
+      flex-flow column
+  .hero--terminal
+    width 100%
+    img
+      width 100%
+      height auto
+  .feature
+    .between-center
+      flex-flow column
+      align-items center
+    .feature--item:not(:last-child)
+      margin-bottom 24px
