@@ -22,7 +22,7 @@ html(lang='en')
             a.badge(href='https://github.com/sophearak/moul/releases')= version
           .nav--link
             a(href='#features') Features
-            a(href='#usage') Usage
+            a(href='https://github.com/sophearak/moul#usage') Usage
             a(href='https://github.com/sophearak/moul') Github
             a.button.is-secondary(href='#get-started') Get Started
     .hero
@@ -72,8 +72,8 @@ html(lang='en')
           h5.card--title
             | Download a&nbsp;
             a(href='https://github.com/sophearak/moul/releases', target='blank') single binary
-            | , add to <code>$PATH</code> and you’re done
-        h3 Don't know what todo?
+            | , add to $PATH and you’re done
+        h3 Or
       .tab
         .tab--heading
           .container.start-center
@@ -97,44 +97,6 @@ html(lang='en')
               //-       | curl -s https://moul.app/install.sh --linux | sh
             .is-Windows
               | Coming soon
-    #usage.usage
-      h2 Usage
-      .container.center
-        .card
-          h5.card--title
-            | Step 1 - Create new photo collection
-          .card--text
-            pre
-              | moul new my-collection
-        .card
-          h5.card--title
-            | Step 2 - Place photos into its folder
-          .card--text
-            ul
-              li <code>photos/cover</code> any landscape aspect ratio will work fine
-              li <code>photos/profile</code> square (1:1 aspect ratio)
-              li <code>photos/collection</code> any aspect ratio
-        .card
-          h5.card--title
-            | Step 3 - Add your information
-          .card--text
-            ul
-              li Add your information in <code>config.json</code>
-        .card
-          h5.card--title
-            | Step 4 - Generate your collection
-          .card--text
-            pre
-              | moul dev
-          .card--note
-            p
-              | This might take a while. It's a good time to grab coffee.
-        .card
-          h5.card--title
-            | Step 5 - Build
-          .card--text
-            pre
-              | moul build
     footer
       .container.center
         p
