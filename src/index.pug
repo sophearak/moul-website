@@ -1,6 +1,6 @@
 - const siteName = 'moul •'
 - const siteDescription = 'The minimalist photo collection generator'
-- const version = 'v1.0.0-beta.1'
+- const version = 'v1.0.1'
 doctype html
 html(lang='en')
   head
@@ -85,8 +85,7 @@ html(lang='en')
       #download.tab
         .tab--heading
           .container.start-center
-            h4.platform.active(data-platform='macOS') macOS
-            h4.platform(data-platform='Linux') Linux
+            h4.platform.active(data-platform='macOS') macOS & Linux
             h4.platform(data-platform='Windows') Windows
         .tab--content.macOS
           .container.center
@@ -96,8 +95,6 @@ html(lang='en')
                 h5.card--title
                   pre
                     | curl -s https://moul.app/install.sh | sh
-            .is-Linux
-              | Coming soon
             .is-Windows
               | Coming soon
     footer
